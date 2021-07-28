@@ -1,6 +1,6 @@
 # Weather-Dashboard
 
-This is an application that find weather conditons on the city you search and it give you the current and the next 5 days forcast.
+This is an application that find weather conditons on the city you search and it give you the current and the next 5 days forecast.
 
 Tasks:
 Third-party APIs allow developers to access their data and functionality by making requests with specific parameters to a URL.
