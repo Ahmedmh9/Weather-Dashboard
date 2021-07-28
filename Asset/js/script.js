@@ -36,11 +36,7 @@ function displayWeather(event) {
 function currentWeather(city) {
   // set url so we can grap data from openweather.
   var queryURL =
-    "https://api.openweathermap.org/data/2.5/weather?q=" +
-    city +
-    "&units=imperial" +
-    "&APPID=" +
-    APIKey;
+    "https://api.openweathermap.org/data/2.5/weather?q=" +city +"&units=imperial" +"&APPID=" +APIKey;
   $.ajax({
     url: queryURL,
     method: "GET",
@@ -49,8 +45,7 @@ function currentWeather(city) {
 
     //Data object from server side Api for icon property.
     var weathericon = response.weather[0].icon;
-    var iconurl =
-      "https://openweathermap.org/img/wn/" + weathericon + "@2x.png";
+    var iconurl ="https://openweathermap.org/img/wn/" + weathericon + "@2x.png";
     var date = new Date(response.dt * 1000).toLocaleDateString();
     //parse the response for name of city and concanatig the date and icon.
     $(currentCity).html(
@@ -83,7 +78,6 @@ function currentWeather(city) {
         if (find(city) > 0) {
           sCity.push(city.toUpperCase());
           localStorage.setItem("cityname", JSON.stringify(sCity));
-          addToList(city);
         }
       }
     }
@@ -111,10 +105,7 @@ function UVIndex(ln, lt) {
 function forecast(cityid) {
   var dayover = false;
   var queryforcastURL =
-    "https://api.openweathermap.org/data/2.5/forecast?id=" +
-    cityid +
-    "&appid=" +
-    APIKey;
+    "https://api.openweathermap.org/data/2.5/forecast?id=" +cityid +"&appid=" +APIKey;
   $.ajax({
     url: queryforcastURL,
     method: "GET",
