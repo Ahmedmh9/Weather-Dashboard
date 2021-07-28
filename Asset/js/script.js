@@ -139,5 +139,3 @@ function forecast(cityid) {
 
 //Click Handlers
 $("#search-button").on("click", displayWeather);
-$(document).on("click", invokePastSearch);
-$(window).on("load", loadlastCity);
